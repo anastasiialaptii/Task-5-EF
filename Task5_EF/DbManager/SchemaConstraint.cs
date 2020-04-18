@@ -6,7 +6,7 @@ namespace Task5_EF.DbManager
     {
         public void SetSchemaConstraint(DbModelBuilder modelBuilder)
         {
-            modelBuilder.HasDefaultSchema("FlowerSupply");
+            modelBuilder.HasDefaultSchema("SupplyFlowerSchema");
         }
     }
 }

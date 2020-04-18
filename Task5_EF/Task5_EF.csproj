@@ -134,10 +134,16 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Managers\StatusTableManager.cs" />
+    <Compile Include="Managers\FlowerManager.cs" />
+    <Compile Include="Managers\FlowerWarehouseManager.cs" />
+    <Compile Include="Managers\WarehouseManager.cs" />
     <Compile Include="Migrations\202004181538095_initial migration.cs" />
     <Compile Include="Migrations\202004181538095_initial migration.designer.cs">
       <DependentUpon>202004181538095_initial migration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004181922562_rename schema db.cs" />
+    <Compile Include="Migrations\202004181922562_rename schema db.Designer.cs">
+      <DependentUpon>202004181922562_rename schema db.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\FlowerModel.cs" />
@@ -147,6 +153,7 @@
     <Compile Include="Models\WarehouseModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DbContext\SupplyContext.cs" />
+    <Compile Include="Repository\IFlowerRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -204,6 +211,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202004181538095_initial migration.resx">
       <DependentUpon>202004181538095_initial migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004181922562_rename schema db.resx">
+      <DependentUpon>202004181922562_rename schema db.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
