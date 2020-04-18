@@ -9,6 +9,8 @@ namespace Task5_EF.Models
 
         public string Name { get; set; }
 
+        public string Name1 { get; set; }
+
         public ICollection<WarehouseModel> Warehouses { get; set; }
 
         public FlowerModel()

@@ -10,10 +10,10 @@ namespace Task5_EF.Controllers
 {
     public class HomeController : Controller
     {
-        MyManager myManager = new MyManager();
+        StatusTableManager myManager = new StatusTableManager();
         public ActionResult Index()
         {
-            myManager.Create();
+           // myManager.Create();
             return View();
         }
 

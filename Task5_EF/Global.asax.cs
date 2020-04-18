@@ -16,8 +16,8 @@ namespace Task5_EF
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            SupplyContext supplyContext = new SupplyContext();
-            supplyContext.Database.CreateIfNotExists();
+            //SupplyContext supplyContext = new SupplyContext();
+            //supplyContext.Database.CreateIfNotExists();
         }
     }
 }

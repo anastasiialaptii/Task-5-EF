@@ -131,7 +131,20 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Managers\MyManager.cs" />
+    <Compile Include="Managers\StatusTableManager.cs" />
+    <Compile Include="Migrations\202004181308429_qwerty.cs" />
+    <Compile Include="Migrations\202004181308429_qwerty.designer.cs">
+      <DependentUpon>202004181308429_qwerty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004181435404_second_migr.cs" />
+    <Compile Include="Migrations\202004181435404_second_migr.designer.cs">
+      <DependentUpon>202004181435404_second_migr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004181438249_mynew.cs" />
+    <Compile Include="Migrations\202004181438249_mynew.designer.cs">
+      <DependentUpon>202004181438249_mynew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\FlowerModel.cs" />
     <Compile Include="Models\PlaceModel.cs" />
     <Compile Include="Models\PlantationModel.cs" />
@@ -192,6 +205,17 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202004181308429_qwerty.resx">
+      <DependentUpon>202004181308429_qwerty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004181435404_second_migr.resx">
+      <DependentUpon>202004181435404_second_migr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004181438249_mynew.resx">
+      <DependentUpon>202004181438249_mynew.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
