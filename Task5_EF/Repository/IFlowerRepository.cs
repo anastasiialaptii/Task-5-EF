@@ -14,11 +14,11 @@ namespace Task5_EF.Repository
 
         FlowerModel GetFlowerById(int flowerId);
 
-        void InsertFlower(int flowerId);
+        void InsertFlower(FlowerModel flower);
 
         void UpdateFlower(int flowerId);
 
-        void DeleteFlower(int flowerId);
+        void DeleteFlower(FlowerModel flower);
 
         void Save();
 

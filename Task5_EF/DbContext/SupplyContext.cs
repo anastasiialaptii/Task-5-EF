@@ -21,6 +21,7 @@ namespace Task5_EF
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            Database.SetInitializer<SupplyContext>(null);
             schemaTableConstraint.SetSchemaConstraint(modelBuilder);
 
             flowerTableConstraint.FlowerTable(modelBuilder);

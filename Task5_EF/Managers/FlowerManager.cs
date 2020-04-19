@@ -10,9 +10,8 @@ namespace Task5_EF.Managers
     {
         private SupplyContext dbContext = new SupplyContext();
 
-        public void DeleteFlower(int flowerId)
+        public void DeleteFlower(FlowerModel flower)
         {
-            var flower = dbContext.Flowers.Find(flowerId);
             dbContext.Flowers.Remove(flower);
         }
 
@@ -26,10 +25,10 @@ namespace Task5_EF.Managers
             return dbContext.Flowers.ToList();
         }
 
-        public void InsertFlower(int flowerId)
+        public void InsertFlower(FlowerModel flower)
         {
-            var flower = dbContext.Flowers.Find(flowerId);
-            dbContext.Flowers.Add(flower); 
+            dbContext.Flowers.Add(flower);
+            Save();
         }
 
         public void Save()
