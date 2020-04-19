@@ -87,9 +87,6 @@ C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\obj\Debug\Task5_EF.csprojA
 C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\obj\Debug\Task5_EF.csproj.CopyComplete
 C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\obj\Debug\Task5_EF.dll
 C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\obj\Debug\Task5_EF.pdb
-C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\obj\Debug\Task5_EF.Migrations.initialmigration.resources
-C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\obj\Debug\Task5_EF.csproj.GenerateResource.cache
-C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\obj\Debug\Task5_EF.Migrations.renameschemadb.resources
 C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\bin\Ninject.dll
 C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\bin\Ninject.Web.Common.dll
 C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\bin\Ninject.Web.Common.WebHost.dll
@@ -98,11 +95,11 @@ C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\bin\Ninject.xml
 C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\bin\Ninject.Web.Common.xml
 C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\bin\Ninject.Web.Common.WebHost.xml
 C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\bin\Ninject.Web.Mvc.xml
-C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\obj\Debug\Task5_EF.Migrations.deleteflowerrequirednamefield.resources
 C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\bin\FluentValidation.dll
 C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\bin\FluentValidation.Mvc.dll
 C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\bin\FluentValidation.ValidatorAttribute.dll
 C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\bin\System.ComponentModel.Annotations.dll
 C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\bin\FluentValidation.xml
 C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\bin\FluentValidation.Mvc.xml
-C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\obj\Debug\Task5_EF.Migrations.addflowerrequirednamefield.resources
+C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\obj\Debug\Task5_EF.Migrations.initialMigration.resources
+C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\obj\Debug\Task5_EF.csproj.GenerateResource.cache

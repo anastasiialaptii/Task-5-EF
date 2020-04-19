@@ -13,13 +13,15 @@ namespace Task5_EF.Models
 
         public string Name { get; set; }
 
-        public ICollection<WarehouseModel> Warehouses { get; set; }
-
-        public FlowerModel()
-        {
-            Warehouses = new List<WarehouseModel>();
-        }
+        public ICollection<FlowerWarehouseModel>FlowerWarehouseModels { get; set; }
     }
+
+
+
+
+
+
+
 
     public class FlowerValidator : AbstractValidator<FlowerModel>
     {

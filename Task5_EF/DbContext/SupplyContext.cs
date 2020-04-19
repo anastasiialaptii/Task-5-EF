@@ -10,6 +10,8 @@ namespace Task5_EF
 
         public DbSet<PlaceModel> Places { get; set; }
 
+        public DbSet<FlowerWarehouseModel> FlowerWarehouses { get; set; }
+
         //public DbSet<PlantationModel> Plantations { get; set; }
 
         //public DbSet<StatusModel> Statuses { get; set; }
@@ -18,6 +20,7 @@ namespace Task5_EF
         FlowerTableConstraint flowerTableConstraint = new FlowerTableConstraint();
         PlaceTableConstraint placeTableConstraint = new PlaceTableConstraint();
         SchemaConstraint schemaTableConstraint = new SchemaConstraint();
+        FlowerWarehouseTableConstraint flowerWarehouseTableConstraint = new FlowerWarehouseTableConstraint();
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -26,6 +29,7 @@ namespace Task5_EF
 
             flowerTableConstraint.FlowerTable(modelBuilder);
             placeTableConstraint.PlaceTable(modelBuilder);
+            flowerWarehouseTableConstraint.FlowerWarehouseTable(modelBuilder);
         }
     }
 }

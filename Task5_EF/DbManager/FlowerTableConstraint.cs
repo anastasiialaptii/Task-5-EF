@@ -11,11 +11,7 @@ namespace Task5_EF.DbManager
                 .ToTable("Flower")
                 .Property(p => p.Name)
                 .HasMaxLength(50)
-                .IsRequired();
-
-            modelBuilder.Entity<FlowerModel>()
-                .HasMany(w => w.Warehouses)
-                .WithMany(f => f.Flowers);
+                .IsRequired();             
         }
     }
 }
