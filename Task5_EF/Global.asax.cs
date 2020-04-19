@@ -23,6 +23,8 @@ namespace Task5_EF
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
+            FluentValidationModelValidatorProvider.Configure();
+
             NinjectModule registrations = new NinjectRegistrations();
             var kernel = new StandardKernel(registrations);
             DependencyResolver.SetResolver(new NinjectDependencyResolver(kernel));

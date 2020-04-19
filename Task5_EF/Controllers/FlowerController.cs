@@ -26,8 +26,13 @@ namespace Task5_EF.Controllers
         [HttpPost]
         public ActionResult CreateFlower(FlowerModel flower)
         {
-            flowerRepository.InsertFlower(flower);
-            return RedirectToAction(nameof(CreateFlower));
+            if (ModelState.IsValid)
+            {
+                flowerRepository.InsertFlower(flower);
+                return RedirectToAction(nameof(GetFlowerList));
+            }
+            else
+                return View();
         }
 
         public ActionResult DeleteFlower(FlowerModel flower)
