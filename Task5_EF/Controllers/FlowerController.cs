@@ -6,20 +6,18 @@ namespace Task5_EF.Controllers
 {
     public class FlowerController : Controller
     {
-        IUnitOfWork unit;
-        public FlowerController(IUnitOfWork uof)
+        IUnitOfWork entityUnit;
+        public FlowerController(IUnitOfWork unitOfWork)
         {
-            unit = uof;
+            entityUnit = unitOfWork;
         }
         public ActionResult GetFlowerList()
         {          
-            return View(unit.Flowers.GetAll());
+            return View(entityUnit.Flowers.GetAll());
         }
 
         public ActionResult CreateFlower()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
@@ -28,8 +26,8 @@ namespace Task5_EF.Controllers
         {
             if (ModelState.IsValid)
             {
-                unit.Flowers.Create(flower);
-                unit.Save();
+                entityUnit.Flowers.Create(flower);
+                entityUnit.Save();
                 return RedirectToAction(nameof(GetFlowerList));
             }
             else
@@ -38,9 +36,9 @@ namespace Task5_EF.Controllers
 
         public ActionResult DeleteFlower(FlowerModel flower)
         {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            entityUnit.Flowers.Delete(flower);
+            entityUnit.Save();
+            return RedirectToAction(nameof(GetFlowerList));
         }
 
         public ActionResult EditFlower()

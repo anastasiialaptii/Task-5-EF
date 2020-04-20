@@ -6,7 +6,6 @@ using System.Collections.Generic;
 
 namespace Task5_EF.Models
 {
-    //[Validator(typeof(FlowerValidator))]
     public class FlowerModel
     {       
         public int Id { get; set; }

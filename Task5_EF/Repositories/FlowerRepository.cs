@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using Task5_EF.IRepository;
@@ -12,7 +13,7 @@ namespace Task5_EF.Repositories
         private SupplyContext supplyDbContext;
         public FlowerRepository(SupplyContext dbContext)
         {
-            this.supplyDbContext = dbContext;
+            supplyDbContext = dbContext;
         }
 
         public void Create(FlowerModel item)
@@ -22,10 +23,10 @@ namespace Task5_EF.Repositories
 
         public void Delete(FlowerModel item)
         {
-            throw new NotImplementedException();
+            supplyDbContext.Flowers.Remove(supplyDbContext.Flowers.Find(item.Id));
         }
 
-        public IEnumerable<FlowerModel> GetAll()
+        public List<FlowerModel> GetAll()
         {
             return supplyDbContext.Flowers.ToList();
         }
@@ -37,7 +38,7 @@ namespace Task5_EF.Repositories
 
         public void Update(FlowerModel item)
         {
-            throw new NotImplementedException();
+            supplyDbContext.Entry(item).State = EntityState.Modified;
         }
     }
 }

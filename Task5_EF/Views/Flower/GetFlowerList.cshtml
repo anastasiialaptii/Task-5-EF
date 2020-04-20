@@ -5,7 +5,29 @@
 
 <h2>Flower List</h2>
 
-@foreach (var item in Model)
-{
-    <p>@item.Name</p>
-}
+<table class="table">
+    <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Delete</th>
+        <th scope="col">Edit</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>
+                @Html.ActionLink("Delete", "DeleteFlower",
+             new { id = item.Id },
+             new
+             {
+                 onclick = "return confirm('Are you sure you want to delete this one?');"
+             })
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "UpdateProduct",
+             new { id = item.Id })
+            </td>
+        </tr>
+    }
+</table>
