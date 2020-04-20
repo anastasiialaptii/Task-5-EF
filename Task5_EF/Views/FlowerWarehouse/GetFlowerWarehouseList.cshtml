@@ -1,0 +1,19 @@
+﻿@model IEnumerable<Task5_EF.Models.FlowerWarehouseModel>
+
+@{
+    ViewBag.Title = "GetFlowerWarehouseList";
+}
+
+<h2>GetFlowerWarehouseList</h2>
+
+<table class="table">
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FlowerModel.Name)
+        </td>
+    </tr>
+}
+
+</table>

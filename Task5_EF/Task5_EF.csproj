@@ -152,6 +152,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\FlowerController.cs" />
+    <Compile Include="Controllers\FlowerWarehouseController.cs" />
     <Compile Include="Controllers\PlantationController.cs" />
     <Compile Include="Controllers\WarehouseController.cs" />
     <Compile Include="DbManager\FlowerTableConstraint.cs" />
@@ -215,6 +216,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Flower\GetFlowerList.cshtml" />
     <Content Include="Views\Flower\CreateFlower.cshtml" />
+    <Content Include="Views\FlowerWarehouse\GetFlowerWarehouseList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

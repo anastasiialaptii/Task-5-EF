@@ -1,6 +1,7 @@
 ﻿using System.Web.Mvc;
 using Task5_EF.Models;
 using Task5_EF.Repository;
+using System.Linq;
 
 namespace Task5_EF.Controllers
 {
@@ -13,9 +14,6 @@ namespace Task5_EF.Controllers
         }
         public ActionResult GetFlowerList()
         {
-            SupplyContext supply = new SupplyContext();
-            supply.Places.Add (new WarehouseModel{ Name="ame1", Address="qwerty" });
-            supply.SaveChanges();
             return View(flowerRepository.GetFlowers());
         }
 
