@@ -12,7 +12,7 @@ namespace Task5_EF.Controllers
             entityUnit = unitOfWork;
         }
         public ActionResult GetFlowerList()
-        {          
+        {
             return View(entityUnit.Flowers.GetAll());
         }
 
@@ -30,8 +30,7 @@ namespace Task5_EF.Controllers
                 entityUnit.Save();
                 return RedirectToAction(nameof(GetFlowerList));
             }
-            else
-                return View();
+            return View();
         }
 
         public ActionResult DeleteFlower(FlowerModel flower)

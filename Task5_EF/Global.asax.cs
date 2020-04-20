@@ -24,8 +24,6 @@ namespace Task5_EF
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            //FluentValidationModelValidatorProvider.Configure();
-
             ValidationConfiguration();
 
             NinjectModule registrations = new NinjectRegistrations();

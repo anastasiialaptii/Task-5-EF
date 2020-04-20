@@ -12,11 +12,6 @@ namespace Task5_EF
 
         public DbSet<FlowerWarehouseModel> FlowerWarehouses { get; set; }
 
-        //public DbSet<PlantationModel> Plantations { get; set; }
-
-        //public DbSet<StatusModel> Statuses { get; set; }
-
-
         FlowerTableConstraint flowerTableConstraint = new FlowerTableConstraint();
         PlaceTableConstraint placeTableConstraint = new PlaceTableConstraint();
         SchemaConstraint schemaTableConstraint = new SchemaConstraint();
