@@ -1,6 +1,6 @@
 ﻿using Ninject.Modules;
-using Task5_EF.Managers;
-using Task5_EF.Repository;
+using Task5_EF.Interfaces;
+using Task5_EF.Repositories;
 
 namespace Task5_EF.NinjectRegistration
 {
@@ -8,7 +8,7 @@ namespace Task5_EF.NinjectRegistration
     {
         public override void Load()
         {
-            Bind<IFlowerRepository>().To<FlowerManager>();
+            Bind<IUnitOfWork>().To<UnitOfWork>();
         }
     }
 }

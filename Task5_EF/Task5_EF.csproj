@@ -162,7 +162,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Managers\FlowerManager.cs" />
+    <Compile Include="Interfaces\IRepository.cs" />
+    <Compile Include="Interfaces\IUnitOfWork.cs" />
     <Compile Include="Managers\FlowerWarehouseManager.cs" />
     <Compile Include="Managers\WarehouseManager.cs" />
     <Compile Include="Migrations\202004192235461_initialMigration.cs" />
@@ -179,7 +180,8 @@
     <Compile Include="NinjectRegistration\NinjectRepistrations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DbContext\SupplyContext.cs" />
-    <Compile Include="Repository\IFlowerRepository.cs" />
+    <Compile Include="Repositories\FlowerRepository.cs" />
+    <Compile Include="Repositories\UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />

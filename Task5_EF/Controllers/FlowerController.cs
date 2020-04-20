@@ -1,20 +1,19 @@
 ﻿using System.Web.Mvc;
 using Task5_EF.Models;
-using Task5_EF.Repository;
-using System.Linq;
+using Task5_EF.Interfaces;
 
 namespace Task5_EF.Controllers
 {
     public class FlowerController : Controller
     {
-        IFlowerRepository flowerRepository;
-        public FlowerController(IFlowerRepository repository)
+        IUnitOfWork unit;
+        public FlowerController(IUnitOfWork uof)
         {
-            flowerRepository = repository;
+            unit = uof;
         }
         public ActionResult GetFlowerList()
-        {
-            return View(flowerRepository.GetFlowers());
+        {          
+            return View(unit.Flowers.GetAll());
         }
 
         public ActionResult CreateFlower()
@@ -29,7 +28,8 @@ namespace Task5_EF.Controllers
         {
             if (ModelState.IsValid)
             {
-                flowerRepository.InsertFlower(flower);
+                unit.Flowers.Create(flower);
+                unit.Save();
                 return RedirectToAction(nameof(GetFlowerList));
             }
             else
