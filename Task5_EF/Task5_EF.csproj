@@ -153,6 +153,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\FlowerController.cs" />
     <Compile Include="Controllers\FlowerWarehouseController.cs" />
+    <Compile Include="Controllers\PlantationController.cs" />
     <Compile Include="Controllers\WarehouseController.cs" />
     <Compile Include="DbManager\FlowerTableConstraint.cs" />
     <Compile Include="DbManager\FlowerWarehouseTableConstraint.cs" />
@@ -224,6 +225,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\NewFolder1\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
