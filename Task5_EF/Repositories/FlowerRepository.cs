@@ -33,12 +33,17 @@ namespace Task5_EF.Repositories
 
         public FlowerModel GetById(int id)
         {
-            throw new NotImplementedException();
+            return supplyDbContext.Flowers.Find(id);
         }
 
-        public void Update(FlowerModel item)
+        public void Update(FlowerModel flower)
         {
-            supplyDbContext.Entry(item).State = EntityState.Modified;
+            var flowerList = GetAll();
+            var updateFLower = flowerList
+                .Where(x => x.Id == flower.Id)
+                .FirstOrDefault();
+            updateFLower.Name = flower.Name;
+
         }
     }
 }

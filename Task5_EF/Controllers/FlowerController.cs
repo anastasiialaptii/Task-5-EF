@@ -41,17 +41,20 @@ namespace Task5_EF.Controllers
             return RedirectToAction(nameof(GetFlowerList));
         }
 
-        public ActionResult EditFlower()
+        public ActionResult EditFlower(int id)
         {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            return View(entityUnit.Flowers.GetById(id));
         }
 
         [HttpPost]
-        public ActionResult EditFlower(int? id)
+        public ActionResult EditFlower(FlowerModel flower)
         {
-            ViewBag.Message = "Your contact page.";
+            if (ModelState.IsValid)
+            {
+                entityUnit.Flowers.Update(flower);
+                entityUnit.Save();
+                return RedirectToAction(nameof(GetFlowerList));
+            }
 
             return View();
         }

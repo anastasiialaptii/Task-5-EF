@@ -219,6 +219,7 @@
     <Content Include="Views\Flower\GetFlowerList.cshtml" />
     <Content Include="Views\Flower\CreateFlower.cshtml" />
     <Content Include="Views\FlowerWarehouse\GetFlowerWarehouseList.cshtml" />
+    <Content Include="Views\Flower\EditFlower.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
