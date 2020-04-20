@@ -9,9 +9,8 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
-using Task5_EF.Models;
 using Task5_EF.NinjectRegistration;
-
+using Task5_EF.Validation;
 
 namespace Task5_EF
 {
@@ -24,19 +23,14 @@ namespace Task5_EF
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            ValidationConfiguration();
-
-            NinjectModule registrations = new NinjectRegistrations();
-            var kernel = new StandardKernel(registrations);
-            DependencyResolver.SetResolver(new NinjectDependencyResolver(kernel));
-        }
-
-        private void ValidationConfiguration()
-        {
             FluentValidationModelValidatorProvider.Configure(provider =>
             {
                 provider.ValidatorFactory = new ValidatorFactory();
             });
+
+            NinjectModule registrations = new NinjectRegistrations();
+            var kernel = new StandardKernel(registrations);
+            DependencyResolver.SetResolver(new NinjectDependencyResolver(kernel));
         }
     }
 }
