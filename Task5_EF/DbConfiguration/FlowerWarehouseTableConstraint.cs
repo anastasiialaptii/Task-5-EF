@@ -14,7 +14,7 @@ namespace Task5_EF.DbManager
         {
             modelBuilder.Entity<FlowerWarehouseModel>()
                 .ToTable("FlowerWarehouse")
-                .HasKey(k => new { k.FlowerId, k.WhId });
+                .HasKey(k => new { k.FlowerId, k.WarehouseId });
 
 
             modelBuilder.Entity<FlowerWarehouseModel>()
@@ -27,7 +27,7 @@ namespace Task5_EF.DbManager
                .ToTable("FlowerWarehouse")
                .HasRequired(x => x.WarehouseModel)
                .WithMany(x => x.FlowerWarehouseModels)
-               .HasForeignKey(x => x.WhId);
+               .HasForeignKey(x => x.WarehouseId);
 
         }
     }

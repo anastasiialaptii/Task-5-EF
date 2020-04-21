@@ -103,3 +103,4 @@ C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\bin\ru\System.Web.WebPages
 C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\obj\Debug\Task5_EF.csproj.CopyComplete
 C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\obj\Debug\Task5_EF.dll
 C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\obj\Debug\Task5_EF.pdb
+C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\obj\Debug\Task5_EF.Migrations.renameflowerwarehousetable.resources

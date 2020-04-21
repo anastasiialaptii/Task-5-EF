@@ -155,10 +155,10 @@
     <Compile Include="Controllers\FlowerWarehouseController.cs" />
     <Compile Include="Controllers\PlantationController.cs" />
     <Compile Include="Controllers\WarehouseController.cs" />
-    <Compile Include="DbManager\FlowerTableConstraint.cs" />
-    <Compile Include="DbManager\FlowerWarehouseTableConstraint.cs" />
-    <Compile Include="DbManager\PlaceTableConstraint.cs" />
-    <Compile Include="DbManager\SchemaConstraint.cs" />
+    <Compile Include="DbConfiguration\FlowerTableConstraint.cs" />
+    <Compile Include="DbConfiguration\FlowerWarehouseTableConstraint.cs" />
+    <Compile Include="DbConfiguration\PlaceTableConstraint.cs" />
+    <Compile Include="DbConfiguration\SchemaConstraint.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -167,6 +167,10 @@
     <Compile Include="Migrations\202004192235461_initialMigration.cs" />
     <Compile Include="Migrations\202004192235461_initialMigration.designer.cs">
       <DependentUpon>202004192235461_initialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004211845268_rename flowerwarehouse table.cs" />
+    <Compile Include="Migrations\202004211845268_rename flowerwarehouse table.designer.cs">
+      <DependentUpon>202004211845268_rename flowerwarehouse table.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\FlowerModel.cs" />
@@ -182,8 +186,9 @@
     <Compile Include="Repositories\PlantationRepository.cs" />
     <Compile Include="Repositories\UnitOfWork.cs" />
     <Compile Include="Repositories\WarehouseRepository.cs" />
-    <Compile Include="Validation\ValidateModel\FlowerValidator.cs" />
-    <Compile Include="Validation\Validator\ValidatorFactory.cs" />
+    <Compile Include="Validation\ModelValidator\FlowerValidator.cs" />
+    <Compile Include="Validation\ModelValidator\WarehouseValidator.cs" />
+    <Compile Include="Validation\ValidatorFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -246,6 +251,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202004192235461_initialMigration.resx">
       <DependentUpon>202004192235461_initialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004211845268_rename flowerwarehouse table.resx">
+      <DependentUpon>202004211845268_rename flowerwarehouse table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
