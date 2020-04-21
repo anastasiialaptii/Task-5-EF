@@ -16,7 +16,7 @@ namespace Task5_EF.Repositories
 
         public void Create(WarehouseModel item)
         {
-            supplyDbContext.Places.Add(new WarehouseModel { Name = item.Name, Address = item.Address });
+            supplyDbContext.Places.Add(item);
         }
 
         public void Delete(WarehouseModel item)
@@ -31,7 +31,7 @@ namespace Task5_EF.Repositories
 
         public WarehouseModel GetById(int id)
         {
-            return GetAll().Where(x => x.Id == id).FirstOrDefault();
+            return GetAll().Find(x => x.Id == id);
         }
 
         public void Update(WarehouseModel item)

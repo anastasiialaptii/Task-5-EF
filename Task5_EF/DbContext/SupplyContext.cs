@@ -26,5 +26,7 @@ namespace Task5_EF
             placeTableConstraint.PlaceTable(modelBuilder);
             flowerWarehouseTableConstraint.FlowerWarehouseTable(modelBuilder);
         }
+
+        public System.Data.Entity.DbSet<Task5_EF.Models.PlantationModel> PlaceModels { get; set; }
     }
 }

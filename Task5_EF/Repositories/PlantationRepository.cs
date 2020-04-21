@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using Task5_EF.IRepository;
 using Task5_EF.Models;
 
@@ -18,27 +16,29 @@ namespace Task5_EF.Repositories
 
         public void Create(PlantationModel item)
         {
-            throw new NotImplementedException();
+            supplyDbContext.Places.Add(item);
         }
 
         public void Delete(PlantationModel item)
         {
-            throw new NotImplementedException();
+            supplyDbContext.Places.Remove(supplyDbContext.Places.Find(item.Id));
         }
 
         public List<PlantationModel> GetAll()
         {
-            throw new NotImplementedException();
+            return supplyDbContext.Places.OfType<PlantationModel>().ToList();
         }
 
         public PlantationModel GetById(int id)
         {
-            throw new NotImplementedException();
+            return GetAll().Find(x => x.Id == id);
         }
 
         public void Update(PlantationModel item)
         {
-            throw new NotImplementedException();
+            var updatePlantation = GetById(item.Id);
+            updatePlantation.Name = item.Name;
+            updatePlantation.Address = item.Address;
         }
     }
 }

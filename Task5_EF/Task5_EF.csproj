@@ -187,6 +187,7 @@
     <Compile Include="Repositories\UnitOfWork.cs" />
     <Compile Include="Repositories\WarehouseRepository.cs" />
     <Compile Include="Validation\ModelValidator\FlowerValidator.cs" />
+    <Compile Include="Validation\ModelValidator\PlantationValidator.cs" />
     <Compile Include="Validation\ModelValidator\WarehouseValidator.cs" />
     <Compile Include="Validation\ValidatorFactory.cs" />
   </ItemGroup>
@@ -230,10 +231,12 @@
     <Content Include="Views\Warehouse\GetWarehouseList.cshtml" />
     <Content Include="Views\Warehouse\CreateWarehouse.cshtml" />
     <Content Include="Views\Warehouse\EditWarehouse.cshtml" />
+    <Content Include="Views\Plantation\CreatePlantation.cshtml" />
+    <Content Include="Views\Plantation\GetPlantationList.cshtml" />
+    <Content Include="Views\Plantation\EditPlantation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Plantation\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
