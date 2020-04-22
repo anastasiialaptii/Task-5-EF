@@ -152,8 +152,12 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\FlowerController.cs" />
+    <Compile Include="Controllers\FlowerPlantationController.cs" />
+    <Compile Include="Controllers\FlowerSupplyController.cs" />
     <Compile Include="Controllers\FlowerWarehouseController.cs" />
     <Compile Include="Controllers\PlantationController.cs" />
+    <Compile Include="Controllers\StatusController.cs" />
+    <Compile Include="Controllers\SupplyController.cs" />
     <Compile Include="Controllers\WarehouseController.cs" />
     <Compile Include="DbConfiguration\FlowerPlantationTableConstraint.cs" />
     <Compile Include="DbConfiguration\FlowerSupplyTableConstraint.cs" />
@@ -186,10 +190,13 @@
     <Compile Include="NinjectRegistration\NinjectRegistrations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DbContext\SupplyContext.cs" />
+    <Compile Include="Repositories\FlowerPlantationRepository.cs" />
     <Compile Include="Repositories\FlowerRepository.cs" />
+    <Compile Include="Repositories\FlowerSupplyRepository.cs" />
     <Compile Include="Repositories\FlowerWarehouseRepository.cs" />
     <Compile Include="Repositories\PlantationRepository.cs" />
     <Compile Include="Repositories\StatusRepository.cs" />
+    <Compile Include="Repositories\SupplyRepository.cs" />
     <Compile Include="Repositories\UnitOfWork.cs" />
     <Compile Include="Repositories\WarehouseRepository.cs" />
     <Compile Include="Validation\ModelValidator\FlowerPlantationValidator.cs" />
@@ -250,6 +257,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\FlowerPlantation\" />
+    <Folder Include="Views\FlowerSupply\" />
+    <Folder Include="Views\Status\" />
+    <Folder Include="Views\Supply\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
