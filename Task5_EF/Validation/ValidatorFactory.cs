@@ -15,6 +15,7 @@ namespace Task5_EF.Validation
             validators.Add(typeof(IValidator<FlowerModel>), new FlowerValidator());
             validators.Add(typeof(IValidator<WarehouseModel>), new WarehouseValidator());
             validators.Add(typeof(IValidator<PlantationModel>), new PlantationValidator());
+            validators.Add(typeof(IValidator<FlowerWarehouseModel>), new FlowerWarehouseValidator());
         }
 
         public override IValidator CreateInstance(Type validatorType)

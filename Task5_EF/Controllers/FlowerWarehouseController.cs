@@ -12,7 +12,7 @@ namespace Task5_EF.Controllers
     public class FlowerWarehouseController : Controller
     {
         IUnitOfWork entityUnit;
-        SupplyContext supplyContext = new SupplyContext();
+
 
         public FlowerWarehouseController(IUnitOfWork unitOfWork)
         {
@@ -23,26 +23,36 @@ namespace Task5_EF.Controllers
             return View(entityUnit.FlowerWarehouses.GetAll()); ;
         }
 
+        [HttpGet]
         public ActionResult CreateFlowerWarehouse()
-        {  
-            
-            ViewBag.Flowers = new SelectList(supplyContext.Flowers, "Id", "Id");
-            ViewBag.Warehouses = new SelectList(supplyContext.Places, "Id", "Id");
-            
+        {
+            SupplyContext supplyContext = new SupplyContext();
+            List<SelectListItem> list = new List<SelectListItem>();
+            foreach (var item in supplyContext.Flowers)
+            {
+                SelectListItem select = new SelectListItem()
+                {
+                    Value = item.Id.ToString(),
+                    Text = item.Name
 
-            return View();
+                };
+                list.Add(select);
+            }
+                ViewModel model = new ViewModel();
+                model.Flowers = list;      
+
+                return View(list);
+            
         }
 
         [HttpPost]
         public ActionResult CreateFlowerWarehouse(FlowerWarehouseModel flowerWarehouse)
         {
-            flowerWarehouse.FlowerId=ViewBag.Flowers;
-            flowerWarehouse.WarehouseId= ViewBag.Warehouses;
             if (ModelState.IsValid)
             {
                 entityUnit.FlowerWarehouses.Create(flowerWarehouse);
                 entityUnit.Save();
-                return RedirectToAction("GetFlowerWarehouseList");
+                return RedirectToAction(nameof(GetFlowerWarehouseList));
             }
             return View();
         }
