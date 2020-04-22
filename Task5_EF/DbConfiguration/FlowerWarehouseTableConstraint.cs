@@ -9,14 +9,8 @@ namespace Task5_EF.DbManager
 {
     public class FlowerWarehouseTableConstraint
     {
-
         public void FlowerWarehouseTable(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<FlowerWarehouseModel>()
-                .ToTable("FlowerWarehouse")
-                .HasKey(k => new { k.FlowerId, k.WarehouseId });
-
-
             modelBuilder.Entity<FlowerWarehouseModel>()
                 .ToTable("FlowerWarehouse")
                 .HasRequired(x => x.FlowerModel)

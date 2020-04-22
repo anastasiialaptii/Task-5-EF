@@ -1,6 +1,4 @@
 C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\obj\Debug\Task5_EF.csprojAssemblyReference.cache
-C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\obj\Debug\Task5_EF.Migrations.initialMigration.resources
-C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\obj\Debug\Task5_EF.csproj.GenerateResource.cache
 C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\bin\Task5_EF.dll.config
 C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\bin\Task5_EF.dll
 C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\bin\Task5_EF.pdb
@@ -103,4 +101,5 @@ C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\bin\ru\System.Web.WebPages
 C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\obj\Debug\Task5_EF.csproj.CopyComplete
 C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\obj\Debug\Task5_EF.dll
 C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\obj\Debug\Task5_EF.pdb
-C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\obj\Debug\Task5_EF.Migrations.renameflowerwarehousetable.resources
+C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\obj\Debug\Task5_EF.Migrations.initial_migration.resources
+C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\obj\Debug\Task5_EF.csproj.GenerateResource.cache

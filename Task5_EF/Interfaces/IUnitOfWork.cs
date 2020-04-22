@@ -11,6 +11,9 @@ namespace Task5_EF.Interfaces
 
         IRepository<PlantationModel> Plantations { get; }
 
+        IRepository<FlowerWarehouseModel> FlowerWarehouses { get; }
+
+
         void Save();
     }
 }

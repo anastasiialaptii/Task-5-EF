@@ -8,7 +8,7 @@ namespace Task5_EF.Models
 
         public string Name { get; set; }
 
-        public ICollection<FlowerWarehouseModel> FlowerWarehouseModels { get; set; }
+        public virtual IList<FlowerWarehouseModel> FlowerWarehouseModels { get; set; }
     }
 }
 

@@ -10,6 +10,7 @@ namespace Task5_EF.Repositories
         private FlowerRepository flowerRepository;
         private WarehouseRepository warehouseRepository;
         private PlantationRepository plantationRepository;
+        private FlowerWarehouseRepository flowerWarehouseRepository;
 
         public UnitOfWork(SupplyContext dbContext)
         {
@@ -44,6 +45,16 @@ namespace Task5_EF.Repositories
                 if (plantationRepository == null)
                     plantationRepository = new PlantationRepository(supplyDbContext);
                 return plantationRepository;
+            }
+        }
+
+        public IRepository<FlowerWarehouseModel> FlowerWarehouses
+        {
+            get
+            {
+                if (flowerWarehouseRepository == null)
+                    flowerWarehouseRepository = new FlowerWarehouseRepository(supplyDbContext);
+                return flowerWarehouseRepository;
             }
         }
 

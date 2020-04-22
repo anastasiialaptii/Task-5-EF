@@ -4,7 +4,7 @@ namespace Task5_EF.Models
 {
     public class WarehouseModel : PlaceModel
     {
-        public ICollection<FlowerWarehouseModel> FlowerWarehouseModels { get; set; }
+        public virtual IList<FlowerWarehouseModel> FlowerWarehouseModels { get; set; }
 
     }
 }
