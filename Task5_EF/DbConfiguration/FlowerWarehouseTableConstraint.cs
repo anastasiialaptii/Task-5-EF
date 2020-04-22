@@ -7,17 +7,17 @@ namespace Task5_EF.DbManager
     {
         public void FlowerWarehouseTable(DbModelBuilder modelBuilder)
         {
-           /* modelBuilder.Entity<FlowerWarehouseModel>()
+            modelBuilder.Entity<FlowerWarehouseModel>()
                 .ToTable("FlowerWarehouse")
-                .HasOptional(x => x.FlowerModel)
+                .HasRequired(x => x.FlowerModel)
                 .WithMany(x => x.FlowerWarehouseModels)
                 .HasForeignKey(x => x.FlowerId);
 
             modelBuilder.Entity<FlowerWarehouseModel>()
                .ToTable("FlowerWarehouse")
-               .HasOptional(x => x.WarehouseModel)
+               .HasRequired(x => x.WarehouseModel)
                .WithMany(x => x.FlowerWarehouseModels)
-               .HasForeignKey(x => x.WarehouseId);*/
+               .HasForeignKey(x => x.WarehouseId);
         }
     }
 }

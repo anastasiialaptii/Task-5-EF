@@ -54,7 +54,6 @@ namespace Task5_EF.Controllers
                 entityUnit.Save();
                 return RedirectToAction(nameof(GetFlowerList));
             }
-
             return View();
         }
     }

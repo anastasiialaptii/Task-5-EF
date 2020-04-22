@@ -23,14 +23,18 @@ namespace Task5_EF
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
+            ConfigValidation();
+            NinjectModule registrations = new NinjectRegistrations();
+            var kernel = new StandardKernel(registrations);
+            DependencyResolver.SetResolver(new NinjectDependencyResolver(kernel));
+        }
+
+        public void ConfigValidation()
+        {
             FluentValidationModelValidatorProvider.Configure(provider =>
             {
                 provider.ValidatorFactory = new ValidatorFactory();
             });
-
-            NinjectModule registrations = new NinjectRegistrations();
-            var kernel = new StandardKernel(registrations);
-            DependencyResolver.SetResolver(new NinjectDependencyResolver(kernel));
         }
     }
 }

@@ -168,9 +168,9 @@
     </Compile>
     <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="Interfaces\IUnitOfWork.cs" />
-    <Compile Include="Migrations\202004221656307_initial_migration.cs" />
-    <Compile Include="Migrations\202004221656307_initial_migration.designer.cs">
-      <DependentUpon>202004221656307_initial_migration.cs</DependentUpon>
+    <Compile Include="Migrations\202004221935097_initial-migration.cs" />
+    <Compile Include="Migrations\202004221935097_initial-migration.designer.cs">
+      <DependentUpon>202004221935097_initial-migration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\FlowerModel.cs" />
@@ -192,9 +192,13 @@
     <Compile Include="Repositories\StatusRepository.cs" />
     <Compile Include="Repositories\UnitOfWork.cs" />
     <Compile Include="Repositories\WarehouseRepository.cs" />
+    <Compile Include="Validation\ModelValidator\FlowerPlantationValidator.cs" />
+    <Compile Include="Validation\ModelValidator\FlowerSupplyValidator.cs" />
     <Compile Include="Validation\ModelValidator\FlowerValidator.cs" />
     <Compile Include="Validation\ModelValidator\FlowerWarehouseValidator.cs" />
     <Compile Include="Validation\ModelValidator\PlantationValidator.cs" />
+    <Compile Include="Validation\ModelValidator\StatusValidator.cs" />
+    <Compile Include="Validation\ModelValidator\SupplyValidator.cs" />
     <Compile Include="Validation\ModelValidator\WarehouseValidator.cs" />
     <Compile Include="Validation\ValidatorFactory.cs" />
   </ItemGroup>
@@ -240,10 +244,9 @@
     <Content Include="Views\Plantation\CreatePlantation.cshtml" />
     <Content Include="Views\Plantation\GetPlantationList.cshtml" />
     <Content Include="Views\Plantation\EditPlantation.cshtml" />
-    <Content Include="Views\FlowerWarehouse\CreateFlowerWarehouse1.cshtml" />
     <Content Include="Views\FlowerWarehouse\GetFlowerWarehouseList.cshtml" />
-    <Content Include="Views\FlowerWarehouse\EditFlowerWarehouse.cshtml" />
     <Content Include="Views\FlowerWarehouse\CreateFlowerWarehouse.cshtml" />
+    <Content Include="Views\FlowerWarehouse\EditFlowerWarehouse.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -262,8 +265,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202004221656307_initial_migration.resx">
-      <DependentUpon>202004221656307_initial_migration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202004221935097_initial-migration.resx">
+      <DependentUpon>202004221935097_initial-migration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -1,31 +1,49 @@
-﻿@model Task5_EF.Models.ViewModel
+﻿@model Task5_EF.Models.FlowerWarehouseModel
 
 @{
-    ViewBag.Title = "CreateFlowerWarehouse";
+    ViewBag.Title = "Create FlowerWarehouse";
 }
 
-<h2>CreateFlowerWarehouse</h2>
 
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
     
-    <div class="form-horizontal">
-        <h4>FlowerWarehouseModel</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-                @Html.ListBoxFor(c=>c.SelectedFlowers, Model.Flowers)
-            </div>
-        </div>
+<div class="form-horizontal">
+    <h4>Flower Plantation</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(model => model.FlowerId, "FlowerId", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
+            @Html.EditorFor(x => x.FlowerId)
+            @Html.ValidationMessageFor(model => model.FlowerId, "", new { @class = "text-danger" })
         </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.WarehouseId, "FlowerId", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+
+            @Html.EditorFor(x => x.WarehouseId)
+            @Html.ValidationMessageFor(model => model.FlowerId, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Amount, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Amount, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Amount, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Create" class="btn btn-default" />
+        </div>
+    </div>
+</div>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+

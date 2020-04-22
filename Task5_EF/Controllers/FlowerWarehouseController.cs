@@ -13,7 +13,6 @@ namespace Task5_EF.Controllers
     {
         IUnitOfWork entityUnit;
 
-
         public FlowerWarehouseController(IUnitOfWork unitOfWork)
         {
             entityUnit = unitOfWork;
@@ -23,26 +22,10 @@ namespace Task5_EF.Controllers
             return View(entityUnit.FlowerWarehouses.GetAll()); ;
         }
 
-        [HttpGet]
+
         public ActionResult CreateFlowerWarehouse()
         {
-            SupplyContext supplyContext = new SupplyContext();
-            List<SelectListItem> list = new List<SelectListItem>();
-            foreach (var item in supplyContext.Flowers)
-            {
-                SelectListItem select = new SelectListItem()
-                {
-                    Value = item.Id.ToString(),
-                    Text = item.Name
-
-                };
-                list.Add(select);
-            }
-                ViewModel model = new ViewModel();
-                model.Flowers = list;      
-
-                return View(list);
-            
+            return View();
         }
 
         [HttpPost]
@@ -65,16 +48,20 @@ namespace Task5_EF.Controllers
         [HttpPost]
         public ActionResult EditFlowerWarehouse(FlowerWarehouseModel flowerWarehouse)
         {
-            entityUnit.FlowerWarehouses.Update(flowerWarehouse);
-            entityUnit.Save();
-            return RedirectToAction("GetFlowerWarehouseList");
+            if (ModelState.IsValid)
+            {
+                entityUnit.FlowerWarehouses.Update(flowerWarehouse);
+                entityUnit.Save();
+                return RedirectToAction(nameof(GetFlowerWarehouseList));
+            }
+            return View();
         }
 
         public ActionResult DeleteFlowerWarehouse(FlowerWarehouseModel flowerWarehouse)
         {
             entityUnit.FlowerWarehouses.Delete(flowerWarehouse);
             entityUnit.Save();
-            return RedirectToAction("GetFlowerWarehouseList");
+            return RedirectToAction(nameof(GetFlowerWarehouseList));
         }
     }
 }

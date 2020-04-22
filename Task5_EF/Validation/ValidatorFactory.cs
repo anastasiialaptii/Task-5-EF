@@ -13,8 +13,12 @@ namespace Task5_EF.Validation
         static ValidatorFactory()
         {
             validators.Add(typeof(IValidator<FlowerModel>), new FlowerValidator());
+            validators.Add(typeof(IValidator<StatusModel>), new StatusValidator());
+            validators.Add(typeof(IValidator<SupplyModel>), new SupplyValidator());
             validators.Add(typeof(IValidator<WarehouseModel>), new WarehouseValidator());
             validators.Add(typeof(IValidator<PlantationModel>), new PlantationValidator());
+            validators.Add(typeof(IValidator<FlowerSupplyModel>), new FlowerSupplyValidator());
+            validators.Add(typeof(IValidator<FlowerPlantationModel>), new FlowerPlantationValidator());
             validators.Add(typeof(IValidator<FlowerWarehouseModel>), new FlowerWarehouseValidator());
         }
 

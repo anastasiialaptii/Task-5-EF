@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<Task5_EF.Models.FlowerWarehouseModel>
 
 @{
-    ViewBag.Title = "GetFlowerWarehouseList";
+    ViewBag.Title = "Get FlowerWarehouse List";
 }
 
-<h2>GetFlowerWarehouseList</h2>
+<h2>Get FlowerWarehouse List</h2>
 
 <p>
     @Html.ActionLink("Create New", "CreateFlowerWarehouse")
@@ -36,7 +36,6 @@
         </td>
         <td>
             @Html.ActionLink("Edit", "EditFlowerWarehouse", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
             @Html.ActionLink("Delete", "DeleteFlowerWarehouse", new { id=item.Id })
         </td>
     </tr>
