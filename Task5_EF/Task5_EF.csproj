@@ -155,10 +155,14 @@
     <Compile Include="Controllers\FlowerWarehouseController.cs" />
     <Compile Include="Controllers\PlantationController.cs" />
     <Compile Include="Controllers\WarehouseController.cs" />
+    <Compile Include="DbConfiguration\FlowerPlantationTableConstraint.cs" />
+    <Compile Include="DbConfiguration\FlowerSupplyTableConstraint.cs" />
     <Compile Include="DbConfiguration\FlowerTableConstraint.cs" />
     <Compile Include="DbConfiguration\FlowerWarehouseTableConstraint.cs" />
     <Compile Include="DbConfiguration\PlaceTableConstraint.cs" />
     <Compile Include="DbConfiguration\SchemaConstraint.cs" />
+    <Compile Include="DbConfiguration\StatusTableConstraint.cs" />
+    <Compile Include="DbConfiguration\SupplyTableConstraint.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -168,12 +172,23 @@
     <Compile Include="Migrations\202004220924132_initial_migration.designer.cs">
       <DependentUpon>202004220924132_initial_migration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004221538115_create_full_db.cs" />
+    <Compile Include="Migrations\202004221538115_create_full_db.designer.cs">
+      <DependentUpon>202004221538115_create_full_db.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004221546134_rebuild_full_db.cs" />
+    <Compile Include="Migrations\202004221546134_rebuild_full_db.designer.cs">
+      <DependentUpon>202004221546134_rebuild_full_db.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\FlowerModel.cs" />
+    <Compile Include="Models\FlowerPlantationModel.cs" />
+    <Compile Include="Models\FlowerSupplyModel.cs" />
     <Compile Include="Models\FlowerWarehouseModel.cs" />
     <Compile Include="Models\PlaceModel.cs" />
     <Compile Include="Models\PlantationModel.cs" />
     <Compile Include="Models\StatusModel.cs" />
+    <Compile Include="Models\SupplyModel.cs" />
     <Compile Include="Models\WarehouseModel.cs" />
     <Compile Include="NinjectRegistration\NinjectRegistrations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -254,6 +269,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202004220924132_initial_migration.resx">
       <DependentUpon>202004220924132_initial_migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004221538115_create_full_db.resx">
+      <DependentUpon>202004221538115_create_full_db.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004221546134_rebuild_full_db.resx">
+      <DependentUpon>202004221546134_rebuild_full_db.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

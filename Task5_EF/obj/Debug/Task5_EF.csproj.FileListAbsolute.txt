@@ -103,3 +103,5 @@ C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\obj\Debug\Task5_EF.dll
 C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\obj\Debug\Task5_EF.pdb
 C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\obj\Debug\Task5_EF.Migrations.initial_migration.resources
 C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\obj\Debug\Task5_EF.csproj.GenerateResource.cache
+C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\obj\Debug\Task5_EF.Migrations.create_full_db.resources
+C:\Users\AstroMugiwara\source\repos\Task5_EF\Task5_EF\obj\Debug\Task5_EF.Migrations.rebuild_full_db.resources

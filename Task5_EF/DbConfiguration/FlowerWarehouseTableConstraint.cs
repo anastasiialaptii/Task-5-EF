@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Web;
+﻿using System.Data.Entity;
 using Task5_EF.Models;
 
 namespace Task5_EF.DbManager
@@ -22,7 +18,6 @@ namespace Task5_EF.DbManager
                .HasRequired(x => x.WarehouseModel)
                .WithMany(x => x.FlowerWarehouseModels)
                .HasForeignKey(x => x.WarehouseId);
-
         }
     }
 }

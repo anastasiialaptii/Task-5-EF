@@ -6,5 +6,6 @@ namespace Task5_EF.Models
     {
         public virtual IList<FlowerWarehouseModel> FlowerWarehouseModels { get; set; }
 
+        public virtual ICollection<SupplyModel> Supply { get; set; }
     }
 }

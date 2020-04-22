@@ -3,6 +3,7 @@
     public class FlowerWarehouseModel
     {
         public int Id { get; set; }
+       
         public int FlowerId { get; set; }
 
         public FlowerModel FlowerModel { get; set; }

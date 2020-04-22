@@ -1,13 +1,13 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
 
 namespace Task5_EF.Models
 {
     public class StatusModel
     {
-        [ScaffoldColumn(false)]
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "This field is required")]
         public string Name { get; set; }
+
+        public virtual ICollection<SupplyModel> Supply { get; set; }
     }
 }
