@@ -16,12 +16,18 @@ namespace Task5_EF.Repositories
 
         public void Create(WarehouseModel item)
         {
-            supplyDbContext.Places.Add(item);
+            if (item != null)
+            {
+                supplyDbContext.Places.Add(item);
+            }
         }
 
         public void Delete(WarehouseModel item)
         {
-            supplyDbContext.Places.Remove(supplyDbContext.Places.Find(item.Id));
+            if (item != null)
+            {
+                supplyDbContext.Places.Remove(supplyDbContext.Places.Find(item.Id));
+            }
         }
 
         public List<WarehouseModel> GetAll()
@@ -36,9 +42,15 @@ namespace Task5_EF.Repositories
 
         public void Update(WarehouseModel item)
         {
-            var res = GetById(item.Id);
-            res.Name = item.Name;
-            res.Address = item.Address;
+            if (item != null)
+            {
+                var updatedItem = GetById(item.Id);
+                if (updatedItem != null)
+                {
+                    updatedItem.Name = item.Name;
+                    updatedItem.Address = item.Address;
+                }
+            }
         }
     }
 }

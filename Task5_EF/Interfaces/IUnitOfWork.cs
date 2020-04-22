@@ -13,6 +13,13 @@ namespace Task5_EF.Interfaces
 
         IRepository<FlowerWarehouseModel> FlowerWarehouses { get; }
 
+        IRepository<FlowerSupplyModel> FlowerSupplies { get; }
+
+        IRepository<FlowerPlantationModel> FlowerPlantations { get; }
+
+        IRepository<SupplyModel> Supplies { get; }
+
+        IRepository<StatusModel> Statuses { get; }
 
         void Save();
     }

@@ -11,6 +11,10 @@ namespace Task5_EF.Repositories
         private WarehouseRepository warehouseRepository;
         private PlantationRepository plantationRepository;
         private FlowerWarehouseRepository flowerWarehouseRepository;
+        private FlowerSupplyRepository flowerSupplyRepository;
+        private FlowerPlantationRepository flowerPlantationRepository;
+        private SupplyRepository supplyRepository;
+        private StatusRepository statusRepository;
 
         public UnitOfWork(SupplyContext dbContext)
         {
@@ -55,6 +59,46 @@ namespace Task5_EF.Repositories
                 if (flowerWarehouseRepository == null)
                     flowerWarehouseRepository = new FlowerWarehouseRepository(supplyDbContext);
                 return flowerWarehouseRepository;
+            }
+        }
+
+        public IRepository<FlowerSupplyModel> FlowerSupply
+        {
+            get
+            {
+                if (flowerSupplyRepository == null)
+                    flowerSupplyRepository = new FlowerSupplyRepository(supplyDbContext);
+                return flowerSupplyRepository;
+            }
+        }
+
+        public IRepository<FlowerPlantationModel> FlowerPlantation
+        {
+            get
+            {
+                if (flowerPlantationRepository == null)
+                    flowerPlantationRepository = new FlowerPlantationRepository(supplyDbContext);
+                return flowerPlantationRepository;
+            }
+        }
+
+        public IRepository<SupplyModel> Supplies
+        {
+            get
+            {
+                if (supplyRepository == null)
+                    supplyRepository = new SupplyRepository(supplyDbContext);
+                return supplyRepository;
+            }
+        }
+
+        public IRepository<StatusModel> Statuses
+        {
+            get
+            {
+                if (statusRepository == null)
+                    statusRepository = new StatusRepository(supplyDbContext);
+                return statusRepository;
             }
         }
 

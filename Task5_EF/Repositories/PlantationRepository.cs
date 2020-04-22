@@ -16,12 +16,18 @@ namespace Task5_EF.Repositories
 
         public void Create(PlantationModel item)
         {
-            supplyDbContext.Places.Add(item);
+            if (item != null)
+            {
+                supplyDbContext.Places.Add(item);
+            }
         }
 
         public void Delete(PlantationModel item)
         {
-            supplyDbContext.Places.Remove(supplyDbContext.Places.Find(item.Id));
+            if (item != null)
+            {
+                supplyDbContext.Places.Remove(supplyDbContext.Places.Find(item.Id));
+            }
         }
 
         public List<PlantationModel> GetAll()
@@ -36,9 +42,15 @@ namespace Task5_EF.Repositories
 
         public void Update(PlantationModel item)
         {
-            var updatePlantation = GetById(item.Id);
-            updatePlantation.Name = item.Name;
-            updatePlantation.Address = item.Address;
+            if (item != null)
+            {
+                var updatePlantation = GetById(item.Id);
+                if (updatePlantation != null)
+                {
+                    updatePlantation.Name = item.Name;
+                    updatePlantation.Address = item.Address;
+                }
+            }
         }
     }
 }

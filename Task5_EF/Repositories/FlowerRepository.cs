@@ -2,6 +2,7 @@
 using System.Linq;
 using Task5_EF.IRepository;
 using Task5_EF.Models;
+using System.Data.Entity;
 
 namespace Task5_EF.Repositories
 {
@@ -18,37 +19,50 @@ namespace Task5_EF.Repositories
         {
             if (item != null)
             {
-                supplyDbContext.Flowers.Add(item);
+                supplyDbContext.Flowers
+                    .Add(item);
             }
         }
 
         public void Delete(FlowerModel item)
         {
-            var deleteFlower = GetById(item.Id);
-
-            if (deleteFlower != null)
+            if (item != null)
             {
-                supplyDbContext.Flowers.Remove(deleteFlower);
+                var deleteFlower = GetById(item.Id);
+
+                if (deleteFlower != null)
+                {
+                    supplyDbContext.Flowers
+                        .Remove(deleteFlower);
+                }
             }
         }
 
         public List<FlowerModel> GetAll()
         {
-            return supplyDbContext.Flowers.ToList();
+            return supplyDbContext.Flowers
+                .Include(x => x.FlowerSupplyModels)
+                .Include(x => x.FlowerWarehouseModels)
+                .Include(x => x.FlowerPlantationModels)
+                .ToList();
         }
 
         public FlowerModel GetById(int id)
         {
-            return supplyDbContext.Flowers.Find(id);
+            return supplyDbContext.Flowers
+                .Find(id);
         }
 
         public void Update(FlowerModel item)
         {
-            var updateFlower = GetById(item.Id);
-
-            if (updateFlower != null)
+            if (item != null)
             {
-                updateFlower.Name = item.Name;
+                var updateFlower = GetById(item.Id);
+
+                if (updateFlower != null)
+                {
+                    updateFlower.Name = item.Name;
+                }
             }
         }
     }
