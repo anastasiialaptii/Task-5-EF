@@ -17,7 +17,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Имя приложения", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("FlowerShipment", "GetFlowerList", "Flower", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -25,6 +25,10 @@
                     <li>@Html.ActionLink("Plantation", "GetPlantationList", "Plantation")</li>
                     <li>@Html.ActionLink("Warehouse", "GetWarehouseList", "Warehouse")</li>
                     <li>@Html.ActionLink("Supply", "GetSupplyList", "Supply")</li>
+                    <li>@Html.ActionLink("FlowerSupply", "GetFlowerSupplyList", "FlowerSupply")</li>
+                    <li>@Html.ActionLink("FlowerPlantation", "GetFlowerPlantationList", "FlowerPlantation")</li>
+                    <li>@Html.ActionLink("FlowerWarehouse", "GetFlowerWarehouseList", "FlowerWarehouse")</li>
+                    <li>@Html.ActionLink("Status", "GetStatusList", "Status")</li>
                 </ul>
             </div>
         </div>

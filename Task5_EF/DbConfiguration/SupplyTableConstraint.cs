@@ -19,6 +19,14 @@ namespace Task5_EF.DbConfiguration
             modelBuilder.Entity<SupplyModel>()
                  .Property(x => x.StatusId)
                  .IsOptional();
+
+            modelBuilder.Entity<SupplyModel>()
+                 .Property(x =>x.ScheduledDate)
+                 .IsOptional();
+
+            modelBuilder.Entity<SupplyModel>()
+                 .Property(x => x.ClosedDate)
+                 .IsOptional();
         }
     }
 }

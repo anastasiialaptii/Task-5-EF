@@ -7,7 +7,7 @@
 <h2>GetPlantationList</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "CreatePlantation")
 </p>
 <table class="table">
     <tr>
@@ -30,7 +30,6 @@
         </td>
         <td>
             @Html.ActionLink("Edit", "EditPlantation", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
             @Html.ActionLink("Delete", "DeletePlantation", new { id=item.Id })
         </td>
     </tr>

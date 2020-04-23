@@ -62,7 +62,7 @@ namespace Task5_EF.Repositories
             }
         }
 
-        public IRepository<FlowerSupplyModel> FlowerSupply
+        public IRepository<FlowerSupplyModel> FlowerSupplies
         {
             get
             {
@@ -72,7 +72,7 @@ namespace Task5_EF.Repositories
             }
         }
 
-        public IRepository<FlowerPlantationModel> FlowerPlantation
+        public IRepository<FlowerPlantationModel> FlowerPlantations
         {
             get
             {

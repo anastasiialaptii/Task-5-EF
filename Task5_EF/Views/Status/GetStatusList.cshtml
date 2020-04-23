@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Task5_EF.Models.StatusModel>
+
+@{
+    ViewBag.Title = "Get Status List";
+}
+
+<h2>Get Status List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CreateStatus")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditStatus", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "DeleteStatus", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Task5_EF.Models.SupplyModel>
+
+@{
+    ViewBag.Title = "Get Supply List";
+}
+
+<h2>Get Supply List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CreateSupply")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.WarehouseId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlantationId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ScheduledDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClosedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StatusId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.WarehouseId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlantationId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ScheduledDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClosedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StatusId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditSupply", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "DeleteSupply", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

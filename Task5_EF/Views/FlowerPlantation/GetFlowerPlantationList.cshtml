@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Task5_EF.Models.FlowerPlantationModel>
+
+@{
+    ViewBag.Title = "Get FlowerPlantation List";
+}
+
+<h2>Get FlowerPlantation List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CreateFlowerPlantation")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FlowerModel.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlantationModel.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Amount)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FlowerModel.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlantationModel.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Amount)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditFlowerPlantation", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "DeleteFlowerPlantation", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

@@ -38,7 +38,9 @@ namespace Task5_EF.Repositories
         public List<SupplyModel> GetAll()
         {
             return supplyDbContext.Supplies
-                .Include(x => x.FlowerSupplyModels)
+                .Include(x => x.PlantationModel)
+                .Include(x => x.StatusModel)
+                .Include(x => x.WarehouseModel)
                 .ToList();
         }
 

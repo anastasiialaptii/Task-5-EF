@@ -176,6 +176,10 @@
     <Compile Include="Migrations\202004221935097_initial-migration.designer.cs">
       <DependentUpon>202004221935097_initial-migration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004222303223_add_isoptional_param.cs" />
+    <Compile Include="Migrations\202004222303223_add_isoptional_param.designer.cs">
+      <DependentUpon>202004222303223_add_isoptional_param.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\FlowerModel.cs" />
     <Compile Include="Models\FlowerPlantationModel.cs" />
@@ -254,13 +258,21 @@
     <Content Include="Views\FlowerWarehouse\GetFlowerWarehouseList.cshtml" />
     <Content Include="Views\FlowerWarehouse\CreateFlowerWarehouse.cshtml" />
     <Content Include="Views\FlowerWarehouse\EditFlowerWarehouse.cshtml" />
+    <Content Include="Views\Supply\GetSupplyList.cshtml" />
+    <Content Include="Views\Supply\CreateSupply.cshtml" />
+    <Content Include="Views\Supply\EditSupply.cshtml" />
+    <Content Include="Views\FlowerPlantation\GetFlowerPlantationList.cshtml" />
+    <Content Include="Views\FlowerPlantation\CreateFlowerPlantation.cshtml" />
+    <Content Include="Views\FlowerPlantation\EditFlowerPlantation.cshtml" />
+    <Content Include="Views\Status\GetStatusList.cshtml" />
+    <Content Include="Views\Status\CreateStatus.cshtml" />
+    <Content Include="Views\Status\EditStatus.cshtml" />
+    <Content Include="Views\FlowerSupply\GetFlowerSupplyList.cshtml" />
+    <Content Include="Views\FlowerSupply\CreateFlowerSupply.cshtml" />
+    <Content Include="Views\FlowerSupply\EditFlowerSupply.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\FlowerPlantation\" />
-    <Folder Include="Views\FlowerSupply\" />
-    <Folder Include="Views\Status\" />
-    <Folder Include="Views\Supply\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -278,6 +290,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202004221935097_initial-migration.resx">
       <DependentUpon>202004221935097_initial-migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004222303223_add_isoptional_param.resx">
+      <DependentUpon>202004222303223_add_isoptional_param.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

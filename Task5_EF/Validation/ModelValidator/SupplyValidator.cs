@@ -7,7 +7,7 @@ namespace Task5_EF.Validation.ModelValidator
     {
         public SupplyValidator()
         {
-            RuleFor(x => x.PlantationId)
+            RuleFor(x => x.ScheduledDate)
                 .NotEmpty()
                 .WithMessage("Date should be greater or equal to current");
         }

@@ -7,52 +7,53 @@ namespace Task5_EF.Controllers
     public class FlowerPlantationController : Controller
     {
         IUnitOfWork entityUnit;
+
         public FlowerPlantationController(IUnitOfWork unitOfWork)
         {
             entityUnit = unitOfWork;
         }
-        public ActionResult GetPlantationList()
+        public ActionResult GetFlowerPlantationList()
         {
-            return View(entityUnit.Plantations.GetAll());
+            return View(entityUnit.FlowerPlantations.GetAll());
         }
 
-        public ActionResult CreatePlantation()
+        public ActionResult CreateFlowerPlantation()
         {
             return View();
         }
 
         [HttpPost]
-        public ActionResult CreatePlantation(PlantationModel plantation)
+        public ActionResult CreateFlowerPlantation(FlowerPlantationModel flowerPlantation)
         {
             if (ModelState.IsValid)
             {
-                entityUnit.Plantations.Create(plantation);
+                entityUnit.FlowerPlantations.Create(flowerPlantation);
                 entityUnit.Save();
-                return RedirectToAction(nameof(GetPlantationList));
+                return RedirectToAction(nameof(GetFlowerPlantationList));
             }
             return View();
         }
 
-        public ActionResult DeletePlantation(PlantationModel plantation)
+        public ActionResult DeleteFlowerPlantation(FlowerPlantationModel flowerPlantation)
         {
-            entityUnit.Plantations.Delete(plantation);
+            entityUnit.FlowerPlantations.Delete(flowerPlantation);
             entityUnit.Save();
-            return RedirectToAction(nameof(GetPlantationList));
+            return RedirectToAction(nameof(GetFlowerPlantationList));
         }
 
-        public ActionResult EditPlantation(int id)
+        public ActionResult EditFlowerPlantation(int id)
         {
-            return View(entityUnit.Plantations.GetById(id));
+            return View(entityUnit.FlowerPlantations.GetById(id));
         }
 
         [HttpPost]
-        public ActionResult EditPlantation(PlantationModel plantation)
+        public ActionResult EditFlowerPlantation(FlowerPlantationModel flowerPlantation)
         {
             if (ModelState.IsValid)
             {
-                entityUnit.Plantations.Update(plantation);
+                entityUnit.FlowerPlantations.Update(flowerPlantation);
                 entityUnit.Save();
-                return RedirectToAction(nameof(GetPlantationList));
+                return RedirectToAction(nameof(GetFlowerPlantationList));
             }
             return View();
         }
