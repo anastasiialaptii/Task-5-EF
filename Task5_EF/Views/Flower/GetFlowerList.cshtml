@@ -16,14 +16,18 @@
     {
         <tr>
             <td>@item.Name</td>
+
             <td>
-                @Html.ActionLink("Delete", "DeleteFlower",
-             new { id = item.Id },
-             new
-             {
-                 onclick = "return confirm('Are you sure you want to delete this one?');"
-             })
-            </td>
+               <a class= "btn btn-danger delete"
+                  data-id = "@item.Id"
+                  data-controller="Flower"
+                  data-action="DeleteFlower"
+                  data-body-message="are you sure?"
+                  >
+                   Delete                  
+               </a>
+                </td>
+
             <td>
                 @Html.ActionLink("Edit", "EditFlower",
              new { id = item.Id })
