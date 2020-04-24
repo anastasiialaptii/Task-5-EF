@@ -180,6 +180,10 @@
     <Compile Include="Migrations\202004222303223_add_isoptional_param.designer.cs">
       <DependentUpon>202004222303223_add_isoptional_param.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004241626387_migration_column.cs" />
+    <Compile Include="Migrations\202004241626387_migration_column.designer.cs">
+      <DependentUpon>202004241626387_migration_column.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\FlowerModel.cs" />
     <Compile Include="Models\FlowerPlantationModel.cs" />
@@ -293,6 +297,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004222303223_add_isoptional_param.resx">
       <DependentUpon>202004222303223_add_isoptional_param.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004241626387_migration_column.resx">
+      <DependentUpon>202004241626387_migration_column.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

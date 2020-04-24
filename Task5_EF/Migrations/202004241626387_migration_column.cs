@@ -1,0 +1,18 @@
+﻿namespace Task5_EF.Migrations
+{
+    using System;
+    using System.Data.Entity.Migrations;
+    
+    public partial class migration_column : DbMigration
+    {
+        public override void Up()
+        {
+            AddColumn("SupplyFlowerSchema.Flower", "MigrationColumn", c => c.String());
+        }
+        
+        public override void Down()
+        {
+            DropColumn("SupplyFlowerSchema.Flower", "MigrationColumn");
+        }
+    }
+}

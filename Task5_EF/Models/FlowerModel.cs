@@ -8,6 +8,8 @@ namespace Task5_EF.Models
 
         public string Name { get; set; }
 
+        public string MigrationColumn { get; set; }
+
         public virtual IList<FlowerWarehouseModel> FlowerWarehouseModels { get; set; }
 
         public virtual IList<FlowerPlantationModel> FlowerPlantationModels { get; set; }
