@@ -32,7 +32,8 @@
         var controller = $(target).data('controller');
         var action = $(target).data('action');
         var bodyMessage = $(target).data('body-message');
-        redirectUrl = "/" + controller + "/GetFlowerList";
+        var redirectaction = $(target).data('redirect-action');
+        redirectUrl = "/" + controller + "/" + "GetFlowerList";
 
         url = "/" + controller + "/" + action + "?Id=" + Id;
         $(".delete-modal-body").text(bodyMessage);
@@ -44,7 +45,7 @@
             .done((result) => {
                 window.location.href = redirectUrl;
             })
-.always(() => {
+            .always(() => {
                 $("#deleteModal").modal('hide');
             });
     });
